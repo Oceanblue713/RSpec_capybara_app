@@ -21,3 +21,27 @@ body {
 .edit-delete {
     margin-top: 20px;
 }
+
+.navbar-default .navbar-brand {
+    padding-top: 25px;
+    font-size: 150%;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.navbar-default .navbar-brand:hover {
+    color: #ff0000;
+}
+
+.navbar-default{
+    border: #64103f;
+}
+
+.navbar-nav {
+    padding-top: 10px;
+    padding-right: 20px;
+}
+
+.sign-link {
+    color: #64103f;
+}
