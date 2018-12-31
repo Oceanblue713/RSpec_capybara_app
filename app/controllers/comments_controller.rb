@@ -10,6 +10,8 @@ class CommentsController < ApplicationController
             @comment.user = current_user
 
             if @comment.save 
+                ActionCable.server.broadcast  "comments",
+                  render(partial: "comments/comment", object: @comment)
                 flash[:notice] = "Comment has ben created"
             else
                 flash.now[:alert] = "Comment has not been created"
@@ -19,7 +21,7 @@ class CommentsController < ApplicationController
     end
 
     private 
-    
+
     def comment_params
         params.require(:comment).permit(:body)
     end
